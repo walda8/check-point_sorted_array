@@ -1,0 +1,18 @@
+ALGORITHME sorted_array
+VAR
+arr:ARRAY_OF_INTEGER[5]
+i, j, joker: INTEGER
+
+BEGIN
+
+FOR i FROM 1 TO 4 DO
+joker:= arr[i]
+j:= i-1
+ WHILE (j >= 0 && arr[j] > joker) DO
+  arr[j+1]:=arr[j]
+  j:= j-1
+ END_WHILE
+arr[j+1]:= joker
+END_FOR
+
+END
